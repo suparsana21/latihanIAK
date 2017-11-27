@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.user.latihanoop.OrderActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:id="@+id/txtTotal"
+        tools:text="Rp 0"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selamat !! Pesanan anda telah berhasil. Silahkan melakukan pembayaran segera untuk menerima pesanan anda. Bagikan ke teman anda untuk memberi tahu mereka!!"
+        android:textAlignment="center"
+        android:padding="16dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bagikan"
+        android:id="@+id/btnShare"
+        android:textColor="#FEFEFE"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="center"/>
+</LinearLayout>
