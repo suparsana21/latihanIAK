@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendOrder();
+                MainActivity.this.openOrder();
             }
         });
 
@@ -161,11 +161,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Buat method sendOrder
-    private void sendOrder(){
+    private void openOrder(){
         //method ini berfungsi untuk berpindah ke activity OrderActivity;
-        Intent intent = new Intent(MainActivity.this,OrderActivity.class); //Intent berfungsi untuk berpindah.. formatnya Intent <nama_intent> = new Intent(NamaKelasIni.this,KelasTujuan.class);
-        intent.putExtra("totalHarga",totalHarga); //putExtra berfungsi untuk memberikan nilai pada variable yang akan dibawa ke activity lain.. formatnya <nama_intent>.putExtra("<nama_variable>",<value>); INGAT PERHATIKAN TIPE DATA VALUENYA
-        startActivity(intent); // untuk melakukan perpindahan activity
+        Intent intent = new Intent(MainActivity.this,OrderActivity.class);
+        //Intent berfungsi untuk berpindah.. formatnya Intent <nama_intent> = new Intent(NamaKelasIni.this,KelasTujuan.class);
+        intent.putExtra("totalHarga",totalHarga);
+        //putExtra berfungsi untuk memberikan nilai pada variable yang akan dibawa ke activity lain.. formatnya <nama_intent>.putExtra("<nama_variable>",<value>); INGAT PERHATIKAN TIPE DATA VALUENYA
+        startActivity(intent);
+        // untuk melakukan perpindahan activity
     }
 
 

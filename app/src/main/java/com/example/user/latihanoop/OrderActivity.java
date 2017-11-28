@@ -12,12 +12,13 @@ import java.text.NumberFormat;
 public class OrderActivity extends AppCompatActivity {
     TextView txtTotal;
     Button btnShare;
-    int totalHarga;
+    int totalHarga = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+        initLayout();
         totalHarga = getIntent().getIntExtra("totalHarga",0); //ini untuk mengambil nilai dari variable "totalHarga" dari activity sebelumnya. Bila TIPE DATA yang dimasukan BERUPA INTEGER, maka gunakan .getIntExtra("<nama_variable>");.. bila TIPE DATA String gunakan .getStringExtra.. dan seterusnya;
 
         txtTotal.setText("Rp "+money(totalHarga));
